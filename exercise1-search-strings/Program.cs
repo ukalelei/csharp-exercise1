@@ -13,26 +13,30 @@ namespace exercise1_search_strings
             int InputIndex;
             int InputLength;
 
-            Console.WriteLine("Search a term that's in the passage below:");
-            Console.WriteLine($"\"{AliceString}\"");
-            input = Console.ReadLine();
-            LowerCased = input.ToLower();
-
-            if ((AliceString.ToLower()).Contains(LowerCased))
+            while (AliceString.Length > 0)
             {
-                InputIndex = (AliceString.ToLower()).IndexOf(LowerCased);
-                InputLength = LowerCased.Length;
+                Console.WriteLine("Search a term that's in the passage below:");
+                Console.WriteLine($"\"{AliceString}\"");
+                input = Console.ReadLine();
+                LowerCased = input.ToLower();
 
-                Console.WriteLine("Search term found");
-                Console.WriteLine(true);
-                Console.WriteLine("Index: " + InputIndex);
-                Console.WriteLine("Length: " + InputLength);
-                Console.WriteLine(AliceString.Remove(InputIndex, InputLength));
-           
+
+                if ((AliceString.ToLower()).Contains(LowerCased))
+                {
+                    InputIndex = (AliceString.ToLower()).IndexOf(LowerCased);
+                    InputLength = LowerCased.Length;
+
+                    Console.WriteLine("Search term found");
+                    Console.WriteLine(true);
+                    Console.WriteLine("Index: " + InputIndex);
+                    Console.WriteLine("Length: " + InputLength);
+
+                    AliceString = AliceString.Remove(InputIndex, InputLength);
+                    Console.WriteLine(AliceString);
+
+                }
+
             }
-
-            //Console.WriteLine(LowerCased);
-
         }
     }
 }
