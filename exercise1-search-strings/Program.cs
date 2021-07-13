@@ -7,32 +7,32 @@ namespace exercise1_search_strings
         static void Main(string[] args)
         {
 
-            string AliceString = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+            string aliceSentence = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
             string input;
-            string LowerCased;
-            int InputIndex;
-            int InputLength;
+            string lowerCased;
+            int inputIndex;
+            int inputLength;
 
-            while (AliceString.Length > 0)
+            while (aliceSentence.Length > 0)
             {
                 Console.WriteLine("Search a term that's in the passage below:");
-                Console.WriteLine($"\"{AliceString}\"");
+                Console.WriteLine($"\"{aliceSentence}\"");
                 input = Console.ReadLine();
-                LowerCased = input.ToLower();
+                lowerCased = input.ToLower();
 
 
-                if ((AliceString.ToLower()).Contains(LowerCased))
+                if ((aliceSentence.ToLower()).Contains(lowerCased))
                 {
-                    InputIndex = (AliceString.ToLower()).IndexOf(LowerCased);
-                    InputLength = LowerCased.Length;
+                    inputIndex = (aliceSentence.ToLower()).IndexOf(lowerCased);
+                    inputLength = lowerCased.Length;
 
                     Console.WriteLine("Search term found");
                     Console.WriteLine(true);
-                    Console.WriteLine("Index: " + InputIndex);
-                    Console.WriteLine("Length: " + InputLength);
+                    Console.WriteLine("Index: " + inputIndex);
+                    Console.WriteLine("Length: " + inputLength);
 
-                    AliceString = AliceString.Remove(InputIndex, InputLength);
-                    Console.WriteLine(AliceString);
+                    aliceSentence = aliceSentence.Remove(inputIndex, inputLength);
+                    Console.WriteLine(aliceSentence);
 
                 }
 

@@ -6,8 +6,8 @@ namespace exercise1_miles_per_gallon
     {
         static void Main(string[] args)
         {
-            string InputMiles;
-            string InputGallons;
+            string inputMiles;
+            string inputGallons;
             double miles;
             double gallons;
             double mpg;
@@ -15,12 +15,12 @@ namespace exercise1_miles_per_gallon
 
 
             Console.WriteLine("How many miles you drove?");
-            InputMiles = Console.ReadLine();
-            miles = double.Parse(InputMiles);
+            inputMiles = Console.ReadLine();
+            miles = double.Parse(inputMiles);
 
             Console.WriteLine("How much gas (in gallons) was used?");
-            InputGallons = Console.ReadLine();
-            gallons = double.Parse(InputGallons);
+            inputGallons = Console.ReadLine();
+            gallons = double.Parse(inputGallons);
 
             mpg = miles / gallons;
             Console.WriteLine("Your car's average miles per gallon is " + mpg +"mpg");

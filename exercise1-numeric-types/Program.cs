@@ -6,19 +6,19 @@ namespace exercise1_numeric_types
     {
         static void Main(string[] args)
         {
-            string InputLength;
-            string InputWidth;
+            string inputLength;
+            string inputWidth;
             double length;
             double width;
             double area;
 
             Console.WriteLine("What is the length of the rectangle?");
-            InputLength = Console.ReadLine();
-            length = double.Parse(InputLength);
+            inputLength = Console.ReadLine();
+            length = double.Parse(inputLength);
 
             Console.WriteLine("What is the width of the rectangle?");
-            InputWidth = Console.ReadLine();
-            width = double.Parse(InputWidth);
+            inputWidth = Console.ReadLine();
+            width = double.Parse(inputWidth);
 
             area = length * width;
             Console.WriteLine("The area of your rectangle is " + area);
